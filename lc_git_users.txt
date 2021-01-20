@@ -1,3 +1,4 @@
 Srishti,Mathur,srishti.mathur@ucalgary.ca,Srishti-Mathur,2021_ENCM369,ENCM369,Geoffrey_Messier,jrlong@ucalgary.ca,UofCencm369,2021_ENCM369
 Steven,Poon,steven.poon@ucalgary.ca,s-poon,2021_ENCM369
 Miki,Rowbottom,miki.rowbottom@ucalgary.ca,mikirowbottom,2021_ENCM369
+Eunbi,Park,eunbi.park@uclagary.ca,2021_ENCM369
