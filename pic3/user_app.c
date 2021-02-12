@@ -92,9 +92,15 @@ Promises:
 - 
 
 */
+#define _XTAL_FREQ 64000000
 void UserAppRun(void)
 {
-
+    unsigned char counter;
+    for (counter=0x00; counter<=0x3F; counter++)
+    {
+        LATA=LATA^counter;
+        __delay_ms(250);
+    }
 
 } /* end UserAppRun */
 
