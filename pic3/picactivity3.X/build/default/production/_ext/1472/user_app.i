@@ -27315,17 +27315,16 @@ void UserAppInitialize(void)
 # 96 "../user_app.c"
 void UserAppRun(void)
 {
-   static u32 u32counter=0x00;
-
+   static u32 u32Counter=0x00;
 
 
    if(RB5==1)
-       {
-
-      u32counter++;
-      LATA=LATA^u32counter;
+   {
+      u32Counter++;
+      LATA=LATA^u32Counter;
       _delay((unsigned long)((250)*(64000000/4000.0)));
 
-  }
+
+   }
 
 }

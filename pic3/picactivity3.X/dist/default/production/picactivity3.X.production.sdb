@@ -76,8 +76,8 @@
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
 "98
-[v UserAppRun@u32counter u32counter `ul  1 s 4 u32counter ]
-"111
+[v UserAppRun@u32Counter u32Counter `ul  1 s 4 u32Counter ]
+"110
 } 0
 "76
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]

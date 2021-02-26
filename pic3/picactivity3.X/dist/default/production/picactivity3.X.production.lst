@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Thu Feb 25 18:58:56 2021
+                                                                                               Thu Feb 25 22:08:42 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -103,7 +103,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
     89                           	psect	bssCOMRAM
     90  000501                     __pbssCOMRAM:
     91                           	callstack 0
-    92  000501                     UserAppRun@u32counter:
+    92  000501                     UserAppRun@u32Counter:
     93                           	callstack 0
     94  000501                     	ds	4
     95  000505                     _G_u32SystemFlags:
@@ -252,7 +252,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    218  01FFC2                     _UserAppRun:
    219                           	callstack 127
    220  01FFC2                     
-   221                           ;../user_app.c: 98:    static u32 u32counter=0x00;;../user_app.c: 102:    if(RB5==1)
+   221                           ;../user_app.c: 98:    static u32 u32Counter=0x00;;../user_app.c: 101:    if(RB5==1)
    222  01FFC2  AACF               	btfss	1231,5,c	;volatile
    223  01FFC4  EFE6  F0FF         	goto	u11
    224  01FFC8  EFE8  F0FF         	goto	u10
@@ -260,20 +260,20 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    226  01FFCC  EFFD  F0FF         	goto	l73
    227  01FFD0                     u10:
    228  01FFD0                     
-   229                           ;../user_app.c: 103:        {;../user_app.c: 105:       u32counter++;
+   229                           ;../user_app.c: 102:    {;../user_app.c: 103:       u32Counter++;
    230  01FFD0  0E01               	movlw	1
-   231  01FFD2  2601               	addwf	UserAppRun@u32counter^(0+1280),f,c
+   231  01FFD2  2601               	addwf	UserAppRun@u32Counter^(0+1280),f,c
    232  01FFD4  0E00               	movlw	0
-   233  01FFD6  2202               	addwfc	(UserAppRun@u32counter+1)^(0+1280),f,c
-   234  01FFD8  2203               	addwfc	(UserAppRun@u32counter+2)^(0+1280),f,c
-   235  01FFDA  2204               	addwfc	(UserAppRun@u32counter+3)^(0+1280),f,c
+   233  01FFD6  2202               	addwfc	(UserAppRun@u32Counter+1)^(0+1280),f,c
+   234  01FFD8  2203               	addwfc	(UserAppRun@u32Counter+2)^(0+1280),f,c
+   235  01FFDA  2204               	addwfc	(UserAppRun@u32Counter+3)^(0+1280),f,c
    236                           
-   237                           ;../user_app.c: 106:       LATA=LATA^u32counter;
+   237                           ;../user_app.c: 104:       LATA=LATA^u32Counter;
    238  01FFDC  50BE               	movf	190,w,c
-   239  01FFDE  1801               	xorwf	UserAppRun@u32counter^(0+1280),w,c
+   239  01FFDE  1801               	xorwf	UserAppRun@u32Counter^(0+1280),w,c
    240  01FFE0  6EBE               	movwf	190,c	;volatile
    241  01FFE2                     
-   242                           ;../user_app.c: 107:       _delay((unsigned long)((250)*(64000000/4000.0)));
+   242                           ;../user_app.c: 105:       _delay((unsigned long)((250)*(64000000/4000.0)));
    243  01FFE2  0E15               	movlw	21
    244  01FFE4  6E13               	movwf	(??_UserAppRun+1)^(0+1280),c
    245  01FFE6  0E4B               	movlw	75
@@ -1130,7 +1130,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Thu Feb 25 18:58:56 2021
+Symbol Table                                                                                   Thu Feb 25 22:08:42 2021
 
      __size_of_SysTickSetup 0022                          l21 FF48                          l30 FF4A  
                         l24 FF7C                          l27 FF9E                          l73 FFFA  
@@ -1156,8 +1156,8 @@ Symbol Table                                                                    
                    __ptext2 FF4C                     __ptext3 FF4A                     __ptext4 FF7E  
                    __ptext5 FF60                     __ptext6 FF48        end_of_initialization FF5A  
           _G_u32SystemFlags 0505                     postinc0 0004EE         __end_of_SystemSleep FF4C  
-              ??_ClockSetup 0512         __size_of_UserAppRun 003A          __end_of_ClockSetup FF4A  
-      UserAppRun@u32counter 0501                   _GpioSetup FF60         start_initialization FF4E  
+              ??_ClockSetup 0512         __size_of_UserAppRun 003A        UserAppRun@u32Counter 0501  
+        __end_of_ClockSetup FF4A                   _GpioSetup FF60         start_initialization FF4E  
              ?_SysTickSetup 0512                 _SystemSleep FF4A                  ?_GpioSetup 0512  
                __pbssCOMRAM 0501           _UserAppInitialize FF4C                ??_UserAppRun 0512  
         ?_UserAppInitialize 0512              ??_SysTickSetup 0512         ??_UserAppInitialize 0512  
