@@ -92,16 +92,19 @@ Promises:
 - 
 
 */
-#define _XTAL_FREQ 64000000
+#define _XTAL_FREQ 64000000 
 void UserAppRun(void)
 {
-    unsigned char counter;
-    for (counter=0x00; counter<=0x3F; counter++)
-    {
-        LATA=LATA^counter;
-        __delay_ms(250);
-    }
-
+   static u32 u32counter=0x00;  //initialize counter variable
+   if(RB5==1)    //if button is pressed
+   {
+       
+      u32counter++;     //increment counter by 1
+      LATA=LATA^u32counter;  //display the value of u32counter on LEDs
+      __delay_ms(250);
+       
+   }   
+  
 } /* end UserAppRun */
 
 

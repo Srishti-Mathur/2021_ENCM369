@@ -6,7 +6,7 @@
   200020h - 2FFFFFh
   30000Ah - 30003Fh
   
- dist/default/production\picactivity3.X.production.hex ranges:
+ dist/default/debug\picactivity3.X.debug.hex ranges:
   0h - 3h
   1FF48h - 1FFFFh
   200000h - 20001Fh
@@ -23,7 +23,7 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/production\picactivity3.X.production.hex
+  1 = dist/default/debug\picactivity3.X.debug.hex
 00000000: 1111------------------------------------------------------------
 0001FF40: --------11111111111111111111111111111111111111111111111111111111
 0001FF80: 1111111111111111111111111111111111111111111111111111111111111111

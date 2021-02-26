@@ -256,9 +256,9 @@ text2 1FF4C 1FF4D CODE 1FF4C 0
 text3 1FF4A 1FF4B CODE 1FF4A 0
 text6 1FF48 1FF49 CODE 1FF48 0
 %locals
-dist/default/production\picactivity3.X.production.o
+dist/default/debug\picactivity3.X.debug.o
 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-C:\Users\mathu\AppData\Local\Temp\s7h0.s
+C:\Users\mathu\AppData\Local\Temp\sl8o.s
 5094 1FF4E 0 CODE 0
 5096 1FF4E 0 CODE 0
 5099 1FF4E 0 CODE 0
