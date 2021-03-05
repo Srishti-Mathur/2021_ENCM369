@@ -27289,6 +27289,7 @@ void SystemSleep(void);
 # 27 "../user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
+void TimeXus (u16 u16Time);
 # 106 "../configuration.h" 2
 # 26 "../user_app.c" 2
 

@@ -2602,8 +2602,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppRun ]
 [f ]
-[v F15922 `uc ~T0 @X0 -> 6 `i s ]
-[i F15922
+[v F15924 `uc ~T0 @X0 -> 6 `i s ]
+[i F15924
 :U ..
 "109
 [; ;../user_app.c: 109:     u8 au8Pattern[6]={0x01,0x04,0x10,0x02,0x08,0x20};
@@ -2616,18 +2616,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _au8Pattern `uc ~T0 @X0 -> 6 `i a ]
-[e = _au8Pattern F15922 ]
+[e = _au8Pattern F15924 ]
 "110
 [; ;../user_app.c: 110:     static u8 u8Element=0x00;
-[v F15924 `uc ~T0 @X0 1 s u8Element ]
-[i F15924
+[v F15926 `uc ~T0 @X0 1 s u8Element ]
+[i F15926
 -> -> 0 `i `uc
 ]
 "112
 [; ;../user_app.c: 112:    for(u8Element=0x00; u8Element<0x06; u8Element++)
 {
-[e = F15924 -> -> 0 `i `uc ]
-[e $ < -> F15924 `i -> 6 `i 2275  ]
+[e = F15926 -> -> 0 `i `uc ]
+[e $ < -> F15926 `i -> 6 `i 2275  ]
 [e $U 2276  ]
 [e :U 2275 ]
 "113
@@ -2635,19 +2635,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "115
 [; ;../user_app.c: 115:     LATA=au8Pattern[u8Element];
-[e = _LATA *U + &U _au8Pattern * -> F15924 `ux -> -> # *U &U _au8Pattern `ui `ux ]
+[e = _LATA *U + &U _au8Pattern * -> F15926 `ux -> -> # *U &U _au8Pattern `ui `ux ]
 "116
 [; ;../user_app.c: 116:     u8Element++;
-[e ++ F15924 -> -> 1 `i `uc ]
+[e ++ F15926 -> -> 1 `i `uc ]
 "117
 [; ;../user_app.c: 117:     if (u8Element==0x06)
-[e $ ! == -> F15924 `i -> 6 `i 2278  ]
+[e $ ! == -> F15926 `i -> 6 `i 2278  ]
 "118
 [; ;../user_app.c: 118:     {
 {
 "119
 [; ;../user_app.c: 119:     u8Element=0x00;
-[e = F15924 -> -> 0 `i `uc ]
+[e = F15926 -> -> 0 `i `uc ]
 "120
 [; ;../user_app.c: 120:     }
 }
@@ -2655,8 +2655,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "121
 [; ;../user_app.c: 121:    }
 }
-[e ++ F15924 -> -> 1 `i `uc ]
-[e $ < -> F15924 `i -> 6 `i 2275  ]
+[e ++ F15926 -> -> 1 `i `uc ]
+[e $ < -> F15926 `i -> 6 `i 2275  ]
 [e :U 2276 ]
 }
 "122
