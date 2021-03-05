@@ -65,8 +65,8 @@ void main(void)
     {
         if(PIR3==0x80)
         {
-    break;
-  }
+             break;
+        }
     }
    HEARTBEAT_ON();
     

@@ -109,16 +109,13 @@ void UserAppRun(void)
     u8 au8Pattern[6]={0x01,0x04,0x10,0x02,0x08,0x20}; //LED pattern
     static u8 u8Element=0x00;   //variable to represent array index
    
-   for(u8Element=0x00; u8Element<0x06; u8Element++) //access each array element
-   {
-    
     LATA=au8Pattern[u8Element];    //turn on LEDs based on index of array that is accessed
     u8Element++;
     if (u8Element==0x06)
     {
     u8Element=0x00;
     }
-   }
+
 } /* end UserAppRun */
 
 

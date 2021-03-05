@@ -91,7 +91,7 @@ void GpioSetup(void)
     PORTA=0x00;
     TRISA=0;
     ANSELA=0;
-    
+   
   
 } /* end GpioSetup() */
 
