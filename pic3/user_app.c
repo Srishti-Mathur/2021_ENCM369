@@ -75,11 +75,22 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-
+  
+    LATA=0x80;
+    T0CON0=0x90;//10010000;
+    T0CON1=0x54;//01010100;
+          
 
 } /* end UserAppInitialize() */
 
-  
+void TimeXus(u16 u16Time)
+{
+    T0CON0 &= 0x7F; //stop timer
+    TMR0H=(u16Time & 0xFF00)>>8;
+    TMR0L=u16Time & 0x00FF;
+    PIR3 &= 0x7F;  //clear TMR0IF flag
+    T0CON0 |= 0x80; //start timer
+}
 /*!----------------------------------------------------------------------------------------------------------------------
 @fn void UserAppRun(void)
 
@@ -92,16 +103,22 @@ Promises:
 - 
 
 */
-#define _XTAL_FREQ 64000000
+//#define _XTAL_FREQ 64000000
 void UserAppRun(void)
 {
-    unsigned char counter;
-    for (counter=0x00; counter<=0x3F; counter++)
+    u8 au8Pattern[6]={0x01,0x04,0x10,0x02,0x08,0x20}; //LED pattern
+    static u8 u8Element=0x00;   //variable to represent array index
+   
+   for(u8Element=0x00; u8Element<0x06; u8Element++) //access each array element
+   {
+    
+    LATA=au8Pattern[u8Element];    //turn on LEDs based on index of array that is accessed
+    u8Element++;
+    if (u8Element==0x06)
     {
-        LATA=LATA^counter;
-        __delay_ms(250);
+    u8Element=0x00;
     }
-
+   }
 } /* end UserAppRun */
 
 

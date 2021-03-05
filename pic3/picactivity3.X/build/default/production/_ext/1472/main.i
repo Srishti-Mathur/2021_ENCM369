@@ -27333,9 +27333,17 @@ void main(void)
 
 
 
-                   ;
+    (LATA &=0x7F);
     SystemSleep();
-                  ;
+    TimeXus(0x03E8);
+    while (1)
+    {
+        if(PIR3==0x80)
+        {
+    break;
+  }
+    }
+   (LATA |=0x80);
 
   }
 
