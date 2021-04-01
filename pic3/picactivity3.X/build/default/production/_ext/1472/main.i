@@ -27327,24 +27327,16 @@ void main(void)
 
   while(1)
   {
-
-
-
+# 64 "../main.c"
     UserAppRun();
 
 
 
     (LATA &=0x7F);
     SystemSleep();
-    TimeXus(0x03E8);
-    while (1)
-    {
-        if(PIR3==0x80)
-        {
-    break;
-  }
-    }
-   (LATA |=0x80);
+    TimeXus(0xFFF4);
+    while(PIR3bits.TMR0IF==0);
+    (LATA |=0x80);
 
   }
 

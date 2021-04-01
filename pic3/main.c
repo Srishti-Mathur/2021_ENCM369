@@ -54,22 +54,23 @@ void main(void)
     /* Drivers */
        
     /* Applications */
+#if 0   
+      TimeXus(0xFFFD); //timing for triangle waves
+    while(PIR3bits.TMR0IF==0);
+    DAC1DATL+=4;
+#endif
+    
+#if 1
     UserAppRun();
    
-     
+ 
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
-    TimeXus(0x03E8); //1000 microseconds=1 ms
-    while (1)
-    {
-        if(PIR3==0x80)
-        {
-             break;
-        }
-    }
-   HEARTBEAT_ON();
-    
+    TimeXus(0xFFF4); //timing for 1kHz sinusoid
+    while(PIR3bits.TMR0IF==0);
+    HEARTBEAT_ON();
+#endif  
   } /* end while(1) main super loop */
   
 } /* end main() */

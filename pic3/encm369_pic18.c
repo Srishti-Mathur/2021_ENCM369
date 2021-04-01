@@ -88,9 +88,10 @@ Promises:
 */
 void GpioSetup(void)
 {
-    PORTA=0x00;
-    TRISA=0;
-    ANSELA=0;
+   
+    ANSELA=0x00;
+    TRISA=0x00;
+    DAC1CON=0xA0; //Configure DAC enabled, Vdd as positive reference, Vss as negative reference, RA2 as output
    
   
 } /* end GpioSetup() */
