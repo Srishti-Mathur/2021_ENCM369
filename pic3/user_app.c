@@ -76,9 +76,9 @@ Promises:
 void UserAppInitialize(void)
 {
   
-    LATA=0x80;
-    T0CON0=0x90;//10010000;
-    T0CON1=0x54;//01010100;
+    LATA=0x80; //initialize output port
+    T0CON0=0x90;  //10010000;
+    T0CON1=0x54;  //01010100;
           
 
 } /* end UserAppInitialize() */
@@ -111,9 +111,9 @@ void UserAppRun(void)
    
     LATA=au8Pattern[u8Element];    //turn on LEDs based on index of array that is accessed
     u8Element++;
-    if (u8Element==0x06)
+    if (u8Element==0x06) //last element of array is reached
     {
-    u8Element=0x00;
+    u8Element=0x00;  //restart pattern
     }
 
 } /* end UserAppRun */
